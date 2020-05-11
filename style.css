@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ion-icon {
+  font-size: 2rem;
+  color: #ccc;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 50px auto 200px;
+  background-color: rgb(255, 255, 255);
+  height: 100%;
+  font-family: 'Quicksand', sans-serif;
+  line-height: 1.6;
+}
+
+.links-aside {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(47, 47, 47);
+  flex-grow: 2;
+  height: 100vh;
+}
+
+.links__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+  flex-grow: 1;
+}
+
+.linker {
+  border-top: 2px grey solid;
+  padding: 10px;
+}
+
+.necklace {
+  position: absolute;
+  top: 0;
+  right: 40px;
+  z-index: -1;
+}
+
+.wpp_company {
+  position: absolute;
+  top: 40px;
+  right: 90px;
+}
+
+.topNavBar-container {
+  background-color: rgb(210, 62, 8);
+  padding-left: 2em;
+  width: fit-content;
+}
+
+.topNavBar {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0.5em;
+  color: #fff;
+}
+
+.topNavBar a {
+  color: #fff;
+  padding: 0.5em;
+}
+
+.company-copywrite{
+  padding-left: 3em;
+  padding-right: 3em;  
+}
+
+@media (max-width: 500px) {
+  .necklace {
+    display: none;
+  }
+  .wpp_company {
+    display: none;
+  }
+
+  body {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+  }
+
+  .company-copywrite {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+  }
+
+  .company-copywrite h2 {
+    margin-bottom: 0.3em;
+  }
+  
+  .topNavBar-container {
+    margin-left: auto;
+    margin-right: auto; 
+  }
