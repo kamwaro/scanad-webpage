@@ -12,6 +12,12 @@ a {
 ion-icon {
   font-size: 2rem;
   color: #ccc;
+  padding-top: 0.5em;
+}
+
+.scanad-logo {
+  position: relative;
+  left: 3em;
 }
 
 body {
@@ -41,7 +47,7 @@ body {
 }
 
 .linker {
-  border-top: 2px grey solid;
+  border-top: 1px grey solid;
   padding: 10px;
 }
 
@@ -77,11 +83,42 @@ body {
   padding: 0.5em;
 }
 
-.company-copywrite{
+.company-copywrite {
   padding-left: 3em;
-  padding-right: 3em;  
+  padding-right: 3em;
 }
 
+a[name='home-outline'] {
+  position: relative;
+  display: inline-block;
+}
+
+.dropDown__sidebar {
+  position: absolute;
+  padding: 1em;
+  left: 3em;
+  background-color: rgb(47, 47, 47);
+  list-style: none;
+
+  margin-top: 1.5em;
+  display: none;
+}
+
+.linker:hover .dropDown__sidebar {
+  display: block;
+}
+
+.dropDown__sidebar:hover {
+  display: block;
+}
+
+[name='home-outline']:hover .dropDown__sidebar {
+  display: block;
+}
+
+.dropDown-link {
+  color: #fff !important;
+}
 @media (max-width: 500px) {
   .necklace {
     display: none;
@@ -104,8 +141,9 @@ body {
   .company-copywrite h2 {
     margin-bottom: 0.3em;
   }
-  
+
   .topNavBar-container {
     margin-left: auto;
-    margin-right: auto; 
+    margin-right: auto;
   }
+}
