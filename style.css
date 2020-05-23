@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+body,
+html {
+  height: 100vh;
+}
+
 a {
   text-decoration: none;
   color: #000;
@@ -27,11 +32,23 @@ ion-icon {
 
 body {
   display: grid;
-  grid-template-columns: 50px auto 200px;
-  background-color: rgb(255, 255, 255);
+  grid-template-columns: 50px auto 500px;
+  /* background-color: rgb(255, 255, 255); */
   height: 100%;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.1rem;
   line-height: 1.6;
+
+  background-color: #fff;
+  background-image: linear-gradient(
+      90deg,
+      transparent 79px,
+      #abced4 79px,
+      #abced4 81px,
+      transparent 81px
+    ),
+    linear-gradient(#eee 0.1em, transparent 0.1em);
+  background-size: 100% 1.2em;
 }
 
 .links-aside {
@@ -41,7 +58,6 @@ body {
   align-items: center;
   background-color: rgb(47, 47, 47);
   flex-grow: 2;
-  height: 100vh;
 }
 
 .links__container {
@@ -54,9 +70,21 @@ body {
 }
 
 .linker {
-  border-top: 1px grey solid;
-  padding: 10px;
+  border-top: 1px rgb(71, 71, 71) solid;
+  padding: 12px;
   position: relative;
+}
+
+.linker:hover {
+  background: rgb(66, 66, 66);
+}
+
+ion-icon {
+  transition: color 0.3s ease;
+}
+
+ion-icon:hover {
+  color: rgb(31, 105, 155);
 }
 
 .necklace {
@@ -104,7 +132,7 @@ a[name='home-outline'] {
 .dropDown__sidebar {
   position: absolute;
   left: 2.8em;
-  top: 0.1em;
+  top: 1px;
   float: right;
   background-color: rgb(47, 47, 47);
   list-style: none;
@@ -123,19 +151,26 @@ a[name='home-outline'] {
   display: block;
 }
 .dropDown-link {
+  display: flex;
+  flex-grow: 1;
   color: #ccc;
-}
-.dropDown-link:hover {
-  background: rgb(66, 66, 66);
+  padding: 0.5em 1em;
 }
 
 .dropdown-item {
+  display: flex;
+  flex-grow: 1;
   transition: all 0.5s;
-  width: max-content;
-  padding: 0.5em;
+  width: 13em;
+  height: 100%;
+  padding: 0.2em;
 }
 
-@media (max-width: 500px) {
+.dropdown-item:hover {
+  background: rgb(66, 66, 66);
+}
+
+@media (max-width: 770px) {
   .necklace {
     display: none;
   }
@@ -145,7 +180,7 @@ a[name='home-outline'] {
 
   body {
     display: grid;
-    grid-template-columns: 50px 1fr;
+    grid-template-columns: 50px auto;
   }
 
   .company-copywrite {
